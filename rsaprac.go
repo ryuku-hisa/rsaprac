@@ -12,6 +12,9 @@ func main() {
 	fmt.Println("Encyption: 0, Decryption: 1")
 	fmt.Print("mode: ")
 	fmt.Scan(&mode)
+	if mode != 0 && mode != 1 {
+		log.Panic("non proper code")
+	}
 
 	var data, p, q, E int
 
@@ -23,7 +26,7 @@ func main() {
 	fmt.Scan(&E)
 
 	N := p * q
-	println("n =", N)
+	println("N =", N)
 	L := LCM(p-1, q-1)
 	println("L =", L)
 
